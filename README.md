@@ -86,7 +86,7 @@ If you wish to contribute to this project. Please contact us at [Anshuman](anshu
 ## Authors
 
 * **Anshuman Pandey** - [an5human](https://github.com/An5human)
-* **Anuj** - [anuj](https://github.com/)
+* **Anuj** - [anujstam](https://github.com/anujstam)
 * **Anirudh Maiya** - [maiya](https://github.com/)
 
 See also the list of [contributors](https://github.com/An5human/RideShare/contributors) who participated in this project.
@@ -97,5 +97,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-I would like to thank PES Unviersity Computer Science Deptartment to present me with the opportunity to work on this project. This was a great learning experince.
+We would like to thank PES University's Computer Science Deptartment for presenting us with the opportunity to work on this project. This was a great learning experience for all of us.
 

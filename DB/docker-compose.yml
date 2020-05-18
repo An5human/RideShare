@@ -1,0 +1,75 @@
+version: '3.1'
+
+services:
+  rmq:
+    image: rabbitmq:3.8.3-alpine
+
+  zoo:
+    image: zookeeper
+    restart: on-failure
+    hostname: zoo
+    ports:
+    - 2181:2181
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181
+
+  master:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh -c "/etc/init.d/postgresql start && sleep 15 && python3 worker.py master 0"
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=password
+    - POSTGRES_DB=rideshare
+    volumes:
+    - .:/code
+    - dbdata:/var/lib/postgresql/data/
+    - /var/run/docker.sock:/var/run/docker.sock
+    links:
+    - rmq
+    - zoo
+    depends_on:
+    - rmq
+    - zoo
+    restart: always
+
+  slave:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    command: sh -c "/etc/init.d/postgresql start && sleep 20 && python3 worker.py slave 0"
+    environment:
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=password
+    - POSTGRES_DB=rideshare
+    volumes:
+    - .:/code
+    - dbdata:/var/lib/postgresql/data/
+    - /var/run/docker.sock:/var/run/docker.sock
+    links:
+    - rmq
+    - zoo
+    depends_on:
+    - rmq
+    - zoo
+    restart: always
+
+  orchestrator:
+    build:
+        context: .
+        dockerfile: Dockerfile_flask
+    command: sh -c "sleep 40 && python3 orchestrator.py"
+    ports:
+        - "80:80"
+    volumes:
+        - .:/code
+        - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+        - rmq
+        - zoo
+    restart: always
+  
+volumes:
+    dbdata:

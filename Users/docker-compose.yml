@@ -1,0 +1,17 @@
+version: '3' 
+services:
+  web:
+    container_name: users
+    build: .
+    image: users:latest
+    command: python3 user_app.py
+    restart: always
+    ports:
+      - "80:80"
+    environment:
+      - TEAM_NAME=CC_0056_0170_0255
+    networks:
+      - overlay
+
+networks:
+  overlay:

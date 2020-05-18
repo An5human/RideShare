@@ -1,0 +1,17 @@
+version: '3' 
+services:
+  web:
+    build: .
+    image: rides:latest
+    container_name: rides
+    command: python3 ride_app.py
+    restart: always
+    ports:
+      - "80:80"
+    networks:
+      - overlay
+    environment:
+      - TEAM_NAME=CC_0056_0170_0255
+
+networks:
+  overlay:

@@ -1,0 +1,8 @@
+ipython
+pika
+kazoo
+flask
+psycopg2-binary
+waitress
+uuid
+docker

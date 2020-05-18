@@ -88,6 +88,7 @@ If you wish to contribute to this project. Please contact us at [Anshuman](anshu
 * **Anshuman Pandey** - [an5human](https://github.com/An5human)
 * **Anuj** - [anuj](https://github.com/)
 * **Anirudh Maiya** - [maiya](https://github.com/)
+
 See also the list of [contributors](https://github.com/An5human/RideShare/contributors) who participated in this project.
 
 ## License

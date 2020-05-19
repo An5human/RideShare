@@ -11,7 +11,7 @@ The project can be set up locally or on remote system. It is preferred to be set
 
 ### Prerequisites
 
-To run the project you will need ** Docker ** . You will also need to install python along with Flask library. We will be using rabbitmq and zookeeper docker images for this project, so no need to install them separately. We use docker-compose to build docker images of slave and master. To install docker on Linux system run the following command
+To run the project you will need **Docker** . You will also need to install python along with Flask library. We will be using rabbitmq and zookeeper docker images for this project, so no need to install them separately. We use docker-compose to build docker images of slave and master. To install docker on Linux system run the following command
 
 To install docker,
 ```

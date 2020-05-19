@@ -81,13 +81,13 @@ Even though Ride and User application may not suit for all application, but the 
 
 ## Contributing
 
-If you wish to contribute to this project. Please contact us at [Anshuman](anshumanpandey30799@gamil.com).
+If you wish to contribute to this project. Please contact us.
 
 ## Authors
 
 * **Anshuman Pandey** - [an5human](https://github.com/An5human)
 * **Anuj** - [anujstam](https://github.com/anujstam)
-* **Anirudh Maiya** - [maiya](https://github.com/)
+* **Anirudh Maiya** - [maiya](https://github.com/AnirudhMaiya)
 
 See also the list of [contributors](https://github.com/An5human/RideShare/contributors) who participated in this project.
 

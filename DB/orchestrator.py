@@ -21,7 +21,7 @@ slave_count = 1
 first_request = 1
 
 
-### Check the usage every 120 minutes ###
+### Check the usage every 120 seconds ###
 def usage_check():
 	global no_of_request
 	print("Usage:",no_of_request,"	Running Contianers:",running_slave_container)
